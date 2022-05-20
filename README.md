@@ -4,6 +4,7 @@
 2. Users can add to cart without logging in
 3. Users can increase or decrease the number of items directly from their cart.
 4. Cart icon adds numbers according to the total number of items added.
+5. **Users only need to provide the shipping address for Physical Products**
 
 **Things Left to Add:**
 1. Search Functionality
