@@ -12,6 +12,7 @@
 4. Desigining and formatting images to fit in the product boxes properly.
 5. Payment Integration (optional)
 6. Product Detail page (optional)
+
 7.**Improve Frontend Design** ‼‼
 
 **Pasword for Admin is Admin**
