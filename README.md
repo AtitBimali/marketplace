@@ -12,6 +12,7 @@
 4. Desigining and formatting images to fit in the product boxes properly.
 5. Payment Integration (optional)
 6. Product Detail page (optional)
+**‼‼ - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) 7. Improve Frontend Design** 
 
 **Pasword for Admin is Admin**
 
