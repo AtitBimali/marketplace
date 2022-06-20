@@ -1,0 +1,2 @@
+1. 2022-30-05: Name and Email address is hidden for a Logged in user while checking out. Also the shipping
+form is hidden for logged in user so that he can procced to payment directly.
