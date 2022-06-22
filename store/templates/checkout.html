@@ -14,6 +14,9 @@
 					<div class="form-field">
 						<input required class="form-control" type="email" name="email" placeholder="Email..">
 					</div>
+					<div class="form-field">
+						<input required class="form-control" type="tel" name="number" placeholder="PhoneNumber..">
+					</div>
 
 				</div>
 				<div id="shipping-info">
@@ -44,9 +47,11 @@
 
 		</div>
 		<div class="box-element hidden" id="payment-info">
-			<small>PayPal Options</small>
+			<small></small>
 
-			<button id="make-payment">Make Payment</button>
+			<button id="make-payment">Submit</button>
+			<h1>Space for Contact Details(message us to know about product)</h1>
+
 
 		</div>
 	</div>
@@ -108,6 +113,7 @@
 		var userFormData = {
 			'name': null,
 			'email': null,
+			'number':null,
 			'total': total,
 		}
 
@@ -126,6 +132,7 @@
 		if (user == 'AnonymousUser') {
 			userFormData.name = form.name.value
 			userFormData.email = form.email.value
+			userFormData.number = form.number.value
 		}
 		var url = '/process_order/'
 		fetch(url, {
