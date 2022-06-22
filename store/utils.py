@@ -1,4 +1,5 @@
 import json
+from math import fabs
 from . models import *
 
 
@@ -9,7 +10,7 @@ def cookieCart(request):
             cart = {}
             print('Cart:', cart)
         items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0, 'shipping': False}
+        order = {'get_cart_total': 0, 'get_cart_items': 0,'shipping':False}
         cartItems = order['get_cart_items']
         for i in cart:
             try:
@@ -31,7 +32,7 @@ def cookieCart(request):
                 }
                 items.append(item)
                 if product.digital == False:
-                    order['shipping'] == True
+                    order['shipping'] = True
 
             except:
                 pass
