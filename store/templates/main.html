@@ -34,22 +34,22 @@
 
 		function getCookie(name) {
 			var cookieArr = document.cookie.split(";");
-			for(var i =0; i<cookieArr.length; i++){
-			var cookiePair = cookieArr[i].split("=");
-			if(name==cookiePair[0].trim()){
-				return decodeURIComponent(cookiePair[1]);
+			for (var i = 0; i < cookieArr.length; i++) {
+				var cookiePair = cookieArr[i].split("=");
+				if (name == cookiePair[0].trim()) {
+					return decodeURIComponent(cookiePair[1]);
+				}
 			}
+			return null;
 		}
-		return null;
-	}
-	var cart = JSON.parse(getCookie('cart'))
-	if(cart == undefined){
-		cart={}
-		console.log('Cart was created')
-		document.cookie= 'cart=' + JSON.stringify(cart)+ ";domain;path=/"
-	}
-	console.log('Cart:',cart)
-		
+		var cart = JSON.parse(getCookie('cart'))
+		if (cart == undefined) {
+			cart = {}
+			console.log('Cart was created')
+			document.cookie = 'cart=' + JSON.stringify(cart) + ";domain;path=/"
+		}
+		console.log('Cart:', cart)
+
 
 	</script>
 
@@ -72,10 +72,13 @@
 
 
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			
+			<form class="form-inline my-2 my-lg-0" method='POST'>
+				{{ search_form.name }}				
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				{% csrf_token %}
 			</form>
+			
 
 			<div class="form-inline my-2 my-lg-0">
 				<a href="#" class="btn btn-warning">Login</a>
