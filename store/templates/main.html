@@ -73,7 +73,7 @@
 
 			</ul>
 			
-			<form class="form-inline my-2 my-lg-0" method='POST'>
+			<form class="form-inline my-2 my-lg-0" method='POST' action = "{% url 'search' %}">
 				{{ search_form.name }}				
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				{% csrf_token %}
@@ -99,6 +99,13 @@
 
 		{% endblock content %}
 	</div>
+	<!-- <div class="container">
+		<br>
+		{% block 2 %}
+
+
+		{% endblock 2 %}
+	</div> -->
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

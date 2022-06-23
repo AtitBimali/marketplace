@@ -139,3 +139,11 @@ def processOrder(request):
 #     else:
 #         return render (request,'search.html',{}
 #         )
+def search_products(request):
+    search_products = Product.objects.filter(name__icontains=request.POST.get('name'))
+    products = Product.objects.all()
+    context ={
+        'products':products,
+        'search_products':search_products
+    }
+    return render(request, 'search.html',context=context)

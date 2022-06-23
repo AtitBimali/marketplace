@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Searched Product</h1>
+{% if search_products %}
+{% for item in search_products %}
+
+<div class="col-lg-4">
+   
+    <img class="thumbnail" src="{{item.imageURL}}">
+    <div class="box-element product">
+        
+
+        <h6><strong>{{item.name}}</strong></h6>
+        <hr>
+        <button data-product={{item.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+        <a class="btn btn-outline-success" href="#">View</a>
+        
+        <a class="btn btn-outline-success" href="#">{{item.category}}</a>
+                
+
+        <h4 style="display: inline-block; float:none"><strong>${{item.price|floatformat:2}}</strong></h4>
+        
+        
+        {% endfor %}
+        
+        {% else %}
+        <div class = 'row'>
+            <h3>Item not available, Please check in later.</h3>
+        </div>
+        {% endif %}
+    </div>
+    
+</div>
+
+{% endblock %}
