@@ -15,6 +15,7 @@
 6. Product Detail page (optional)
 7. Cookie Functionality ✔
 8. **Improve Frontend Design ‼‼**
+
 **Recent Changes**
 1. Allowing unauthenticated users to add items to cart.
 2. Added Cookie Functionality ( cookie will store the cart details for unauthenticated users).
